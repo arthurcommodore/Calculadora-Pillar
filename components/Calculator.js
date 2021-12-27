@@ -76,6 +76,5 @@ yum.define([
                     this.setstate({values});
                 }
             }
-
         })
 })

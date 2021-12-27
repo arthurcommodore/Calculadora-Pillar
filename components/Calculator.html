@@ -16,6 +16,6 @@
     <button :class="Button" label="3" @click="addDigit($element.innerHTML)">3</button>
     <button :class="Button operation" label="+" @click="setOperation($element.innerHTML)">+</button>
     <button :class="Button double" label="0" @click="addDigit($element.innerHTML)">0</button>
-    <button :class="Button" label="=" @click="setOperation($element.innerHTML)">.</button>
+    <button :class="Button" label="=" @click="addDigit($element.innerHTML)">.</button>
     <button :class="Button operation" label="=" @click="setOperation($element.innerHTML)">=</button>
 </div>
