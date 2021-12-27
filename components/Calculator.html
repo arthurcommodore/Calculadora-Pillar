@@ -1,0 +1,21 @@
+
+<div :class="Calculator">
+    <div :class="Display">{{state.displayValue}}</div>
+    <button :class="Button triple" label="AC" @click="clearMemory()">AC</button>
+    <button :class="Button operation" label="/" @click="setOperation" :class>/</button>
+    <button :class="Button" label="7" @click="addDigit($element.innerHTML)">7</button>
+    <button :class="Button" label="8" @click="addDigit($element.innerHTML)">8</button>
+    <button :class="Button" label="9" @click="addDigit($element.innerHTML)">9</button>
+    <button :class="Button operation" label="*" @click="setOperation($element.innerHTML)">*</button>
+    <button :class="Button" label="4" @click="addDigit($element.innerHTML)">4</button>
+    <button :class="Button" label="5" @click="addDigit($element.innerHTML)">5</button>
+    <button :class="Button" label="6" @click="addDigit($element.innerHTML)">6</button>
+    <button :class="Button operation" label="-" @click="setOperation($element.innerHTML)">-</button>
+    <button :class="Button" label="1" @click="addDigit($element.innerHTML)">1</button>
+    <button :class="Button" label="2" @click="addDigit($element.innerHTML)">2</button>
+    <button :class="Button" label="3" @click="addDigit($element.innerHTML)">3</button>
+    <button :class="Button operation" label="+" @click="setOperation($element.innerHTML)">+</button>
+    <button :class="Button double" label="0" @click="addDigit($element.innerHTML)">0</button>
+    <button :class="Button" label="=" @click="setOperation($element.innerHTML)">.</button>
+    <button :class="Button operation" label="=" @click="setOperation($element.innerHTML)">=</button>
+</div>
