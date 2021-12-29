@@ -1,12 +1,3 @@
-
-const initialstate = {
-    displayValue: "0",
-    clearDisplay: false,
-    operation: null,
-    values: [0, 0],
-    current: 0
-}
-
 yum.define([
     PiUrl.create("components/Calculator.html"),
     PiUrl.create("components/Calculator.css"),
@@ -14,6 +5,14 @@ yum.define([
     PiUrl.create("components/display.css")
     ],
     function(html) {
+        const initialstate = {
+            displayValue: "0",
+            clearDisplay: false,
+            operation: null,
+            values: [0, 0],
+            current: 0
+        }
+
         PiExport("Calculator", class extends PiComponent {
             
             state = {...initialstate}
@@ -68,11 +67,11 @@ yum.define([
                 this.setstate({displayValue, clearDisplay: false});
         
                 if(n !== ".") {
-                    const i = this.state.current;
+                    const index = this.state.current;
                     const newValue = parseFloat(displayValue);
                     console.log(this.state)
                     const values = [...this.state.values];
-                    values[i] = newValue;
+                    values[index] = newValue;
                     this.setstate({values});
                 }
             }
