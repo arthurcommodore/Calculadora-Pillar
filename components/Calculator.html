@@ -1,6 +1,6 @@
 
 <div :class="Calculator">
-    <div :class="Display">{{state.displayValue}}</div>
+    <div :class="Display">{@state.displayValue}</div>
     <button :class="Button triple" @click="clearMemory()">AC</button>
     <button :class="Button operation" @click="setOperation($element.innerHTML)" :class>/</button>
     <button :class="Button" @click="addDigit($element.innerHTML)">7</button>
